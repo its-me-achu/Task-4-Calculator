@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income & Expense Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Income & Expense Calculator</h1>
+
+        <!-- Input Form -->
+<div class="form-container">
+  <label for="type">Type:</label>
+  <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+  </select>
+
+  <label for="description">Description:</label>
+  <input type="text" id="description" placeholder="Enter description">
+
+  <label for="amount">Amount:</label>
+  <input type="number" id="amount" placeholder="Enter amount">
+
+  <label for="date">Date:</label>
+  <input type="date" id="date">
+
+  <button id="add-btn">Add Entry</button>
+  <button id="reset-btn">Reset</button>
+</div>
+
+<!-- Filters -->
+<div class="filters">
+  <input type="radio" name="filter" value="all" checked> All
+  <input type="radio" name="filter" value="income"> Income
+  <input type="radio" name="filter" value="expense"> Expense
+</div>
+
+<!-- Summary -->
+<div class="summary">
+  <p>Total Income: <span id="total-income">0</span></p>
+  <p>Total Expense: <span id="total-expense">0</span></p>
+  <p>Net Balance: <span id="net-balance">0</span></p>
+</div>
+
+<!-- Entries List -->
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Actions</th>
+      </tr>
+  </thead>
+  <tbody id="entries-list"></tbody>
+</table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
